@@ -1,0 +1,11 @@
+name: Docker Build & Publish
+on:
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  ok:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "FORGED_PRODUCER_OK head_ref=${{ github.head_ref }}"
